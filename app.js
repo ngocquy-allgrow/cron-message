@@ -22,7 +22,7 @@ global.that = Puppeteer;
 	let googleTranslate = await that.goToCronMessage();
 	let checkUrl = await that.page.evaluate(() => location.href);
 	
-	if (checkUrl != process.env.URL_TRANSLATE) {
+	if (checkUrl != process.env.URL_CRON_MESSAGE) {
 		that.closePage();
 		await that.settingRequest();
 		googleTranslate = await that.goToCronMessage();
